@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="DJ1 — a 10-week online group drum class for complete beginners with Jacobo Vega-Albela. Small group, no kit required to start. Join the pilot cohort waitlist.">
+<meta name="theme-color" content="#091528">
+<meta property="og:title" content="DJ1 — Online Group Drum Class for Beginners">
+<meta property="og:description" content="A 10-week online group drum class for complete beginners. Small group, no kit required to start.">
+<meta property="og:type" content="website">
+<title>DJ1 — Online Group Drum Class for Beginners | Jacobo Vega-Albela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* CSS goes here — added in follow-up edits */
+</style>
+</head>
+<body>
+<main>
+
+  <!-- HERO: eyebrow, h1, subhead, 3 chips, CTA + tel, trust line, hero img -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap"></div>
+  </section>
+
+  <!-- WHAT'S INCLUDED: 4-tile grid — 10 weeks, 90-min sessions, cap of 10, what to bring -->
+  <section aria-labelledby="includedTitle">
+    <div class="wrap"></div>
+  </section>
+
+  <!-- TESTIMONIALS: 3 cards (Will, Annie, Joseph). Eyebrow honestly says "private students". -->
+  <section aria-labelledby="testimonialsTitle">
+    <div class="wrap"></div>
+  </section>
+
+  <!-- PRICING: two cards — $250 full course (featured) + $30 drop-in. Fineprint. -->
+  <section aria-labelledby="pricingTitle">
+    <div class="wrap"></div>
+  </section>
+
+  <!-- ABOUT: 2 short paragraphs + 3-line credential block (Education / Teaching / Performance) -->
+  <section aria-labelledby="aboutTitle">
+    <div class="wrap"></div>
+  </section>
+
+  <!-- FAQ: 5 details/summary items — drumset, kid, small-group, payment, missed class -->
+  <section aria-labelledby="faqTitle">
+    <div class="wrap"></div>
+  </section>
+
+</main>
+
+<!-- FINAL CTA BAND -->
+<section class="cta-band" aria-label="Join the pilot cohort waitlist">
+  <div class="cta-band-inner"></div>
+</section>
+
+<!-- FOOTER -->
+<footer></footer>
+
+<script>
+// Single source of truth for the waitlist mailto. Same encoding pattern as the reference page.
+const PRIMARY_CTA_URL = "mailto:jacobovamusic@gmail.com?subject=DJ1%20Waitlist%20%E2%80%94%20Pilot%20Cohort&body=Hi%20Jacobo%2C%0A%0AI%27d%20like%20to%20join%20the%20DJ1%20pilot%20cohort%20waitlist.%20A%20bit%20about%20me%3A%0A%0A-%20Name%3A%20%0A-%20Drumming%20experience%3A%20none%0A-%20Time%20zone%3A%20%0A-%20What%20I%27m%20hoping%20to%20get%20out%20of%20the%20class%3A%20%0A%0AThanks%21";
+document.querySelectorAll('[data-cta]').forEach(el => el.setAttribute('href', PRIMARY_CTA_URL));
+
+// Auto-resize message to parent (Squarespace iframe).
+function reportHeight(){
+  try{
+    const h = Math.ceil(document.documentElement.getBoundingClientRect().height);
+    parent.postMessage({type:'jva-iframe-height',height:h},'*');
+  }catch(e){}
+}
+window.addEventListener('load', reportHeight);
+window.addEventListener('resize', reportHeight);
+document.addEventListener('toggle', reportHeight, true);
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(reportHeight);
+
+const y = document.getElementById('year');
+if(y) y.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
